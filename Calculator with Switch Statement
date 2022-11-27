@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+int main()
+{
+    double a, b;
+    int x;
+    char c;
+    printf("Enter Your Calculation ");
+    scanf("%lf %c %lf", &a, &c, &b);
+    switch (c)
+    {
+    case '+':
+        printf(" =%.2lf", a + b);
+        break;
+    case '-':
+        printf(" =%.2lf", a - b);
+        break;
+    case '*':
+        printf(" =%.2lf", a * b);
+        break;
+    case '/':
+        printf(" =%.2lf", a / b);
+        break;
+    case '^':
+        printf(" =%.2lf", pow(a, b));
+        break;
+    default:
+        printf("Function Invalid");
+        break;
+    }
+    return 0;
+}
