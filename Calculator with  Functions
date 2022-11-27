@@ -1,0 +1,141 @@
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+void sum();
+void multiplication();
+void division();
+void remaindernumber();
+void power();
+void square();
+void rectangle();
+void circle();
+int main()
+{
+start:
+
+    printf("Enter 1 for Sum\nEnter 2 for Multiplication\nEnter 3 for Division\nEnter 4 for Remainder\nEnter 5 for power\nEnter 6 for Area of Square\nEnter 7 for Area of Rectangle\nEnter 8 for Area of Circle\n");
+    int a;
+    scanf("%d", &a);
+    if (a == 1)
+    {
+        sum();
+    }
+    else if (a == 2)
+    {
+        multiplication();
+    }
+    else if (a == 3)
+    {
+        division();
+    }
+    else if (a == 4)
+    {
+        remaindernumber();
+    }
+    else if (a == 5)
+    {
+        power();
+    }
+    else if (a == 6)
+    {
+        square();
+    }
+    else if (a == 7)
+    {
+        rectangle();
+    }
+    else if (a == 8)
+    {
+        circle();
+    }
+    else
+    {
+        printf("Wrong Number\n\n");
+    }
+    goto start;
+    return 0;
+}
+
+void sum()
+{
+    int a, b;
+    printf("Enter a First Number =");
+    scanf("\n%d", &a);
+    printf("Enter a Second Number =");
+    scanf("\n%d", &b);
+    int sum = a + b;
+
+    printf("Sum =%d\n\n", sum);
+}
+void multiplication()
+{
+    int a, b;
+    printf("Enter a First Number =");
+    scanf("\n%d", &a);
+    printf("Enter a Second Number =");
+    scanf("\n%d", &b);
+    int multi = a * b;
+
+    printf("Multiplication =%d\n\n", multi);
+}
+void division()
+{
+    float a, b;
+    printf("Enter a Dividend =");
+    scanf("\n%f", &a);
+    printf("Enter a Divisor =");
+    scanf("\n%f", &b);
+    float div = a / b;
+
+    printf("Quotient =%f\n\n", div);
+}
+void remaindernumber()
+{
+    int a, b;
+    printf("Enter a Dividend =");
+    scanf("\n%d", &a);
+    printf("Enter a Divisor =");
+    scanf("\n%d", &b);
+    int remain = a % b;
+
+    printf("Remainder =%d\n\n", remain);
+}
+void power()
+{
+    int a, b;
+    printf("Enter a Number =");
+    scanf("\n%d", &a);
+    printf("Enter power =");
+    scanf("\n%d", &b);
+    int x;
+    x = pow(a, b);
+
+    printf("Result =%d\n\n", x);
+}
+void square()
+{
+    printf("Enter Length of a side of Square =");
+    float a;
+    scanf("\n%f", &a);
+    a = a * a;
+    printf("Area of Square =%f\n\n", a);
+}
+void rectangle()
+{
+    float a, b, area;
+    printf("Enter Length of a side of Rectangle =");
+    scanf("\n%f", &a);
+    printf("Enter Width of a side of Rectangle =");
+    scanf("\n%f", &b);
+    area = a * b;
+    printf("Area of Rectangle =%f\n\n", area);
+}
+void circle()
+{
+    float r, area;
+    printf("Enter Length of a Radius of Circle =");
+    scanf("\n%f", &r);
+    area = 3.14 * r * r;
+    printf("Area of Cirlce =%f\n\n", area);
+}
